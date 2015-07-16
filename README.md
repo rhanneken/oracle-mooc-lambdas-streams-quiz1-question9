@@ -5,11 +5,11 @@ Question 9:
 
 > To convert all the Integers in a list, l, to their hash value, which of the following Lambda expressions would work?
 > 
-> 1. l.replace(Integer::hashCode)
-> 2. l.replace(n -> n.hashCode())
-> 3. l.replaceAll(Integer::hashCode)
-> 4. l.replaceAll(n -> n.hashCode())
-> 5. l.replaceAll(Number::hashCode)
+> 1. `l.replace(Integer::hashCode)`
+> 2. `l.replace(n -> n.hashCode())`
+> 3. `l.replaceAll(Integer::hashCode)`
+> 4. `l.replaceAll(n -> n.hashCode())`
+> 5. `l.replaceAll(Number::hashCode)`
 
 The ordering of the possible answers is random and varies each time one takes the quiz.
 

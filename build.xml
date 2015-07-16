@@ -1,0 +1,94 @@
+<project name="quiz1.question9" basedir=".">
+
+  <property name="src" location="src/main/java"/>
+  <property name="classes" location="target/classes"/>
+
+  <target name="init">
+    <mkdir dir="${classes}"/>
+  </target>
+
+  <target name="-compile">
+    <javac
+      srcdir="${src}"
+      sourcepath=""
+      destdir="${classes}"
+      source="1.8"
+      target="1.8"
+      includeAntRuntime="false">
+      <include name="quiz1/question9/Answer.java"/>
+      <include name="quiz1/question9/Answer${answer.number}.java" />
+    </javac>
+  </target>
+
+  <target name="-exec">
+    <java
+      classname="quiz1.question9.Answer${answer.number}"
+      classpath="${classes}"/>
+  </target>
+
+  <target name="answer1" depends="compile1">
+    <antcall target="-exec">
+      <param name="answer.number" value="1"/>
+    </antcall>
+  </target>
+
+  <target name="compile1" depends="init">
+    <antcall target="-compile">
+      <param name="answer.number" value="1"/>
+    </antcall>
+  </target>
+
+  <target name="answer2" depends="compile2">
+    <antcall target="-exec">
+      <param name="answer.number" value="2"/>
+    </antcall>
+  </target>
+
+  <target name="compile2" depends="init">
+    <antcall target="-compile">
+      <param name="answer.number" value="2"/>
+    </antcall>
+  </target>
+
+  <target name="answer3" depends="compile3">
+    <antcall target="-exec">
+      <param name="answer.number" value="3"/>
+    </antcall>
+  </target>
+
+  <target name="compile3" depends="init">
+    <antcall target="-compile">
+      <param name="answer.number" value="3"/>
+    </antcall>
+  </target>
+
+  <target name="answer4" depends="compile4">
+    <antcall target="-exec">
+      <param name="answer.number" value="4"/>
+    </antcall>
+  </target>
+
+  <target name="compile4" depends="init">
+    <antcall target="-compile">
+      <param name="answer.number" value="4"/>
+    </antcall>
+  </target>
+
+  <target name="answer5" depends="compile5">
+    <antcall target="-exec">
+      <param name="answer.number" value="5"/>
+    </antcall>
+  </target>
+
+  <target name="compile5" depends="init">
+    <antcall target="-compile">
+      <param name="answer.number" value="5"/>
+    </antcall>
+  </target>
+
+  <target name="clean">
+    <delete quiet="true" includeemptydirs="true">
+      <fileset dir="${classes}"/>
+    </delete>
+  </target>
+</project>

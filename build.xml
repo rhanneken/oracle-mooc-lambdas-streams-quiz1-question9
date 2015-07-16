@@ -15,6 +15,7 @@
       source="1.8"
       target="1.8"
       includeAntRuntime="false">
+      <compilerarg value="-Xdiags:verbose"/>
       <include name="quiz1/question9/Answer.java"/>
       <include name="quiz1/question9/Answer${answer.number}.java" />
     </javac>

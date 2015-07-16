@@ -21,7 +21,7 @@ There are three problems:
 
 To see this for yourself, install [Apache Ant](http://ant.apache.org/), clone this repo, change to the directory with build.xml, and execute
 
-```
+```sh
 ant answer1
 ant answer2
 ant answer3
